@@ -1,7 +1,4 @@
 streamlit
 fpdf2
 reportlab
-Pillow>=9.3.0,<9.5.0
-setuptools>=68
-wheel>=0.40
-pip>=23.2
+Pillow==9.4.0
