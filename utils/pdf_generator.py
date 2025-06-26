@@ -254,7 +254,7 @@ def create_header_footer(canvas, doc):
     # Left logo
     if os.path.exists(left_logo_path):
         try:
-            canvas.drawImage(left_logo_path, 60, height - 120, width=80, height=80, 
+            canvas.drawImage(left_logo_path, 60, height - 100, width=80, height=80, 
                            preserveAspectRatio=True, mask='auto')
         except Exception as e:
             print(f"Could not load left logo: {e}")
@@ -263,14 +263,14 @@ def create_header_footer(canvas, doc):
     right_logo = right_logo_path if os.path.exists(right_logo_path) else left_logo_path
     if os.path.exists(right_logo):
         try:
-            canvas.drawImage(right_logo, width - 140, height - 120, width=80, height=80, 
+            canvas.drawImage(right_logo, width - 140, height - 100, width=80, height=80, 
                            preserveAspectRatio=True, mask='auto')
         except Exception as e:
             print(f"Could not load right logo: {e}")
     
     # School name and title
     canvas.setFillColor(colors.HexColor('#1a365d'))
-    canvas.setFont("Helvetica-Bold", 24)
+    canvas.setFont("Helvetica-Bold", 18)
     canvas.drawCentredString(width/2, height - 60, "AL-GHAZALI HIGH SCHOOL")
     
     canvas.setFont("Helvetica-Bold", 16)
@@ -280,7 +280,7 @@ def create_header_footer(canvas, doc):
     # Decorative line under header
     canvas.setStrokeColor(colors.HexColor('#2b6cb0'))
     canvas.setLineWidth(2)
-    canvas.line(50, height - 140, width - 50, height - 140)
+    # canvas.line(50, height - 140, width - 50, height - 140)
     
     
     # Footer section
