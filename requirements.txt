@@ -1,5 +1,5 @@
 streamlit
 fpdf2
 reportlab
-Pillow==9.4.0
+Pillow==10.3.0
  
