@@ -125,7 +125,7 @@ def main():
             diary_date = st.date_input(
                 "Select Date",
                 value=datetime.now().date(),
-                help="Choose the date for the diary"
+                help="Choose the date for the diary",
             )
             
             # Class selection
