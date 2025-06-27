@@ -82,6 +82,16 @@ st.markdown("""
         border: 1px solid #f5c6cb;
         margin: 1rem 0;
     }
+    
+    @media (max-width: 768px) {
+        .main-header {
+            padding: 1rem;
+            font-size: 1.5rem;
+        }
+        .stButton {
+            width: 100%;
+        }
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -164,14 +174,29 @@ def main():
         
         # Define subjects
         subjects = {
-            "📝 English & Work-Book": "english",
-            "📜 Urdu": "urdu", 
-            "🔢 Mathematics": "math",
+            "📝 English": "english",
+            "📜 Urdu": "urdu",
+            "📐 Math": "math",
             "🔬 Science": "science",
             "🕌 Islamiat": "islamiat",
-            "💻 Nardban": "computer",
+            "💻 Computer": "computer",
             "📖 Nazra": "nazra"
         }
+        
+        # Custom subject input
+        st.markdown("### 🆕 Add Custom Subjects")
+        st.markdown("*Add any additional subjects that are not in the list above*")
+        
+        col1_custom, col2_custom = st.columns(2)
+        with col1_custom:
+            new_subject1 = st.text_input("Custom Subject 1", key="custom_subject1")
+            if new_subject1:
+                subjects[f"🆕 {new_subject1}"] = new_subject1.lower()
+        
+        with col2_custom:
+            new_subject2 = st.text_input("Custom Subject 2", key="custom_subject2")
+            if new_subject2:
+                subjects[f"🆕 {new_subject2}"] = new_subject2.lower()
         
         diary_entries = {}
         
