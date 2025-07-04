@@ -6,7 +6,7 @@ from utils.pdf_generator import generate_diary_pdf
 # Page configuration
 st.set_page_config(
     page_title="School Diary Manager",
-    page_icon="📚",
+    page_icon="assets/school_logo_right.png",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
